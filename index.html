@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+ 
+    <link rel="icon" type="image/png" href="Favicon.png">
+
+    <style>
+        
+        body
+        {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        h1, h2, h3
+        {
+            margin: 0 0 10px;
+        }
+
+        a
+        {
+            text-decoration: none;
+            color: #0077ff;
+            transition: 0.3s;
+        }
+
+        a:hover
+        {
+            color: #0055aa;
+        }
+
+        header
+        {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        nav .logo
+        {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        nav ul
+        {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li
+        {
+            display: inline;
+        }
+
+        .hero
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to right, #0077ff, #00d4ff);
+            color: #fff;
+        }
+
+        .hero h1
+        {
+            font-size: 2.5rem;
+        }
+
+        .hero p
+        {
+            margin: 10px 0 20px;
+        }
+
+        .hero .btn
+        {
+            padding: 10px 20px;
+            background: #fff;
+            color: #0077ff;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .hero .btn:hover
+        {
+            background: #0077ff;
+            color: #fff;
+        }
+
+        .about
+        {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about img
+        {
+            width: 300px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .skills
+        {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .skill
+        {
+            background: #fff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .projects
+        {
+            padding: 50px 20px;
+            background: #eef6ff;
+        }
+
+        .project-grid
+        {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .project-card
+        {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover
+        {
+            transform: scale(1.05);
+        }
+
+        .skill-card
+        {
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .skill-card:hover
+        {
+            transform: scale(1.25);
+            background-color: #00d4ff;
+        }
+
+        .project-card img
+        {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .contact
+        {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact a 
+        {
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+
+        footer
+        {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: #fff;
+        }
+
+        .menu-toggle
+        {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+
+
+        @media (max-width: 768px)
+        {
+            nav ul
+            {
+                display: none;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul.show
+            {
+                display: flex;
+            }
+
+            .menu-toggle
+            {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><img src="My Portfolio.png" height="40px"></div>
+            <button class="menu-toggle"><img src="Hamburger Icon.png" height="50px"></button>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <h1>Hi, I’m Swapnil Fakirappa Patil</h1>
+        <p>Aspiring AI/ML Engineer and a Robotics & Game Dev. Enthusiast</p>
+        <a href="Resume - Swapnil Patil.pdf" class="btn" target="_blank">Download Resume</a>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section class="about" id="about">
+        <img src="Casual Photo.jpg" alt="Your Photo">
+        <h2>About Me</h2>
+        <p>Hi, I’m Swapnil — a Computer Science and AI enthusiast currently pursuing my studies at Scaler School of Technology and BITS Pilani. I’m passionate about coding, robotics, and building innovative tech solutions that blend creativity with impact. Over the years, I’ve developed projects ranging from IoT and Arduino-based systems to web platforms that simplify learning technology. I enjoy solving problems through code (C, C++, Java, HTML, CSS, JavaScript) and exploring how AI can transform the way we interact with the digital world. Beyond academics, I love sharing knowledge, experimenting with new ideas, and constantly pushing myself to think like a builder. 🚀</p>
+
+        <div class="skills">
+            <div class="skill skill-card">C</div>
+            <div class="skill skill-card">C++</div>
+            <div class="skill skill-card">Java</div>
+            <div class="skill skill-card">HTML</div>
+            <div class="skill skill-card">CSS</div>
+            <div class="skill skill-card">JavaScript</div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+        <h2 style="text-align:center;">My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="RunForFun Cover Image.png" alt="Run For Fun">
+                <h3>Run For Fun</h3>
+                <p>Run For Fun is a classic-inspired arcade platformer where you play as a brave knight on a lighthearted adventure! Jump, run, and dodge through tricky obstacles as you avoid small slime monsters, leap across platforms, and collect shiny coins. But beware—if you fall off the land or touch an enemy, the challenge resets, pushing you to try again and master your timing.</p>
+                <p>This game was created for educational purposes and built using assets made freely available by Brackeys, customized into a complete playable experience.</p>
+                <a href="https://github.com/SwapnilPatil28/Run-For-Fun-Game-Dev-Project" target="_blank">GitHub</a> | 
+                <a href="https://swapnilpatil28.github.io/Run-For-Fun-Game-Dev-Project/" target="_blank">Live Demo</a>
+            </div>
+            <div class="project-card">
+                <img src="Learn Tech.png" alt="Learn Tech">
+                <h3>Learn Tech</h3>
+                <p>Learn Tech is a Compilation of all the information available related to Technology and is provided FREE OF COST to all so that maximum users can avail its Benefit. It provides References and also gives Credits to the Original Content Creators of the compiled Information.</p>
+                <p>The Students can use it for Project Modules related Details and to get the Knowledge about the Technology, Sensors, Controllers, Robotics, 3D Printing, IoT and AI. Teachers can use it for teaching and explaining the Students and Parents can use it to guide their Children.</p>
+                <a href="https://sites.google.com/view/learntech-wi" target="_blank">Website</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:nil.patil2809@gmail.com">nil.patil2809@gmail.com</a></p>
+        <p>
+            <a href="https://www.linkedin.com/in/swapnil-f-patil" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/SwapnilPatil28" target="_blank">GitHub</a>
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 Swapnil Fakirappa Patil. All rights reserved.</p>
+    </footer>
+
+    <!-- JS FOR MENU -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('nav ul');
+        menuToggle.addEventListener('click', () => { navLinks.classList.toggle('show'); });
+    </script>
+
+</body>
+</html>
