@@ -27,7 +27,7 @@ Check out the live website here: [Portfolio Website](https://swapnilpatil28.gith
 ## 🛠️ Tech Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript  
-- **Fonts & Icons:** Google Fonts (Poppins), Custom SVG icons  
+- **Font:** Google Fonts (Poppins)
 - **Design Elements:** Gradient animations, CSS hover effects, responsive layouts  
 - **Projects Showcase:** Godot Game Engine for “Run For Fun” project  
 
